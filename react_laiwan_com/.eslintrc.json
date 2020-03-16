@@ -37,6 +37,7 @@
         "import/no-extraneous-dependencies": "off", //禁止使用无关软件包
         "no-shadow" : "off",
         "react/jsx-props-no-spreading":"off",//禁止传播jsx道具
-        "react/prefer-stateless-function":"off" //强制将无状态组件变为纯函数
+        "react/prefer-stateless-function":"off", //强制将无状态组件变为纯函数
+        "react/no-find-dom-node": "off" // 可以使用ReactDom
     }
 }

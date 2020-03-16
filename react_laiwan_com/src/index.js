@@ -2,6 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-const wrapper = document.getElementById('create-article-form');
+const home = document.getElementById('laiwan');
 
-ReactDOM.render(<App />, wrapper);
+ReactDOM.render(<App />, home);

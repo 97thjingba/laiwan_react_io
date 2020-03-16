@@ -1,45 +1,28 @@
-import React from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-} from 'react-router-dom';
+import React, { Component } from 'react';
+import BackgroundImage from 'react-background-image';
+import placeholder from './source/bg_ios.png';
+import hdImage from './source/bg_web.jpg';
+import './view/style/home.css';
 
-export default function App() {
-    return (
-        <Router>
-            <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/about">About</Link>
-                        </li>
-                    </ul>
-                </nav>
+export default class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        };
+    }
 
-                {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-                <Switch>
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                    <Route path="/">
-                        <Home />
-                    </Route>
-                </Switch>
-            </div>
-        </Router>
-    );
-}
+    componentDidMount() {
+        //
+    }
 
-function Home() {
-    return <h2>Home</h2>;
-}
 
-function About() {
-    return <h2>About</h2>;
+    render() {
+        return (
+            <BackgroundImage
+                placeholder={placeholder}
+                src={hdImage}
+                className="background"
+            />
+        );
+    }
 }

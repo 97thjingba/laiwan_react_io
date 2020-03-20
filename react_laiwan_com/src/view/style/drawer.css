@@ -1,0 +1,11 @@
+.burger {
+    color: white;
+}
+
+.list {
+    height: 100vh;
+    width: 300px;
+    background-image: url('../image/drawerImage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

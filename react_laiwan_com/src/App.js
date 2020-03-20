@@ -1,18 +1,16 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/no-unused-state */
+/* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react';
 import BackgroundImage from 'react-background-image';
-import { Button, Drawer } from '@material-ui/core';
-import placeholder from './source/bg_ios.png';
-import hdImage from './source/bg_web.jpg';
 import './view/style/home.css';
+import bigPhone from './source/img-phone.png';
+import smallPhone from './source/small-phone.png';
+import logo from './source/logo.png';
+// import './view/style/debug.css';
 
 export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showDrawer: false,
         };
     }
 
@@ -22,15 +20,29 @@ export default class App extends Component {
 
 
     render() {
-        const { drawer } = this.state;
         return (
-            <BackgroundImage
-                placeholder={placeholder}
-                src={hdImage}
-                className="background"
-            >
-                <Button onClick={toggleDrawer('left', true)}>Open Left</Button>
-            </BackgroundImage>
+            <div className="container">
+                <div className="navigation_bar">
+                    <div className="row_center">
+                        <img src={logo} className="logo" />
+                        <p className="title">来玩</p>
+                    </div>
+                    <div className="row_center">
+                        <a href="/"><p className="subtitle">首页</p></a>
+                        <a href="/"><p className="subtitle">德州术语表</p></a>
+                    </div>
+                </div>
+                <div className="content">
+                    <div className="phone_content">
+                        <BackgroundImage
+                            placeholder={smallPhone}
+                            src={bigPhone}
+                            className="phone"
+                        />
+                    </div>
+                </div>
+            </div>
+            // 暂时还是不把这放在背景里了.还是直接在body里面放...这个用来加载轮播图吧.不然文档流不知道如何设置
         );
     }
 }
